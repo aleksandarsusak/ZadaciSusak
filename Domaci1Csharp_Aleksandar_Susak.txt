@@ -1,6 +1,6 @@
 static void Main(string[] args)
         {
-            // Za brojeve od 1 do 100 ispisati "Cica" ako je broj deljiv 
+            // 1. Za brojeve od 1 do 100 ispisati "Cica" ako je broj deljiv 
 sa 3. Ako je broj deljiv sa 5 ispisati
             // "Maca". Ako je broj deljiv i sa 3 i sa 5 ispisati "Cica 
 Maca".
