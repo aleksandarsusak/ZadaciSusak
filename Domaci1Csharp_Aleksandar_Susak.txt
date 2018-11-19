@@ -1,0 +1,87 @@
+static void Main(string[] args)
+        {
+            // Za brojeve od 1 do 100 ispisati "Cica" ako je broj deljiv 
+sa 3. Ako je broj deljiv sa 5 ispisati
+            // "Maca". Ako je broj deljiv i sa 3 i sa 5 ispisati "Cica 
+Maca".
+
+            for (int broj = 1; broj <= 100; broj++)
+            {
+                if (broj % 3 == 0 && broj % 5 == 0)
+                {
+                    Console.WriteLine("Broj {0}: Cica Maca", broj);
+                }
+                else if (broj % 5 == 0)
+                {
+                    Console.WriteLine("Broj {0}: Maca", broj);
+                }
+                else if (broj % 3 == 0)
+                {
+                    Console.WriteLine("Broj {0}: Cica", broj);
+                }
+                else if (!(broj % 3 == 0 && broj % 5 == 0))
+                {
+                    Console.WriteLine("Broj {0}: ni Cica ni Maca", 
+broj);
+                }
+            }
+            Console.ReadLine();
+
+            // 2. Korisnik unosi broj sa tastature. Ako je broj paran, 
+neka ispise kvadrat tog broja. Ako je broj
+            // neparan, onda kub unetog broja.
+
+            Console.WriteLine("Unesite proizvoljan broj: ");
+            int broj = Convert.ToInt32(Console.ReadLine());
+            int resenjeKvadrat = broj * broj;
+            int resenjeKub = broj * broj * broj;
+
+            if (broj % 2 == 0)
+            {
+                Console.WriteLine("Broj {0} je paran. Njegov kvadrat je 
+{1}.", broj, resenjeKvadrat);
+            }
+            else
+            {
+                Console.WriteLine("Broj {0} je neparan. Njegov kub je 
+{1}.", broj, resenjeKub);
+            }
+            Console.ReadLine();
+
+            // 3. Korisnik unosi dva broja. Ako su oba uneta broja 
+parna, neka ispise njihov proizvod. Ako je prvi
+            // paran a drugi neparan, neka ispise razliku ta dva broja. 
+Ako su oba broja neparna, podeliti jedan 
+            // drugim i ispisati njihov kolicnik.
+
+            Console.Write("Unesite prvi broj: ");
+            float prviBroj = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Unesite drugi broj: ");
+            float drugiBroj = Convert.ToInt32(Console.ReadLine());
+            float zbir = prviBroj + drugiBroj;
+            float razlika1 = prviBroj - drugiBroj;
+            float razlika2 = drugiBroj - prviBroj;
+            float kolicnik = prviBroj / drugiBroj;
+
+            if (prviBroj % 2 == 0 && drugiBroj % 2 == 0)
+            {
+                Console.WriteLine("Brojevi {0} i {1} su parni. Njihov 
+zbir je {2}.", prviBroj, drugiBroj, zbir);
+            }
+            else if (prviBroj % 2 == 1 && drugiBroj % 2 == 1)
+            {
+                Console.WriteLine("Brojevi {0} i {1} su neparni. Njihov 
+kolicnik je {2}.", prviBroj, drugiBroj, kolicnik);
+            }
+            else if (prviBroj % 2 == 0 && drugiBroj % 2 == 1)
+            {
+                Console.WriteLine("Broj {0} je paran, broj {1} je 
+neparan. Njihova razlika je {2}.", prviBroj, drugiBroj, razlika1);
+            }
+            else if (prviBroj % 2 == 1 && drugiBroj % 2 == 0)
+            {
+                Console.WriteLine("Broj {0} je neparan, broj {1} je 
+paran. Njihova razlika je {2}.", drugiBroj, prviBroj, razlika2);
+            }
+            Console.ReadLine();
+        }
