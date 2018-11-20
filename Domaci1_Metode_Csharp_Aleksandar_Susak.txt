@@ -1,0 +1,116 @@
+namespace ConsoleApp3DomaciMetodama
+{
+    class Program
+    {
+        // 2. Korisnik unosi broj sa tastature. Ako je broj paran, neka 
+ispise kvadrat tog broja. Ako je broj
+        // neparan, onda kub unetog broja.
+
+        public int Square(int num)
+        {
+            int square;
+            square = num * num;
+            return square;
+        }
+        public int Cub(int num)
+        {
+            int cub;
+            cub = num * num * num;
+            return cub;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Unesite proizvoljan broj: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int resultSquare;
+            int resultCub;
+
+            Program s = new Program();
+            resultSquare = s.Square(number);
+            resultCub = s.Cub(number);
+
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("Broj {0} je paran. Njegov kvadrat je 
+{1}.", number, resultSquare);
+            }
+            else
+            {
+                Console.WriteLine("Broj {0} je neparan. Njegov kub je 
+{1}.", number, resultCub);
+            }
+            Console.ReadLine();
+
+            // 3. Korisnik unosi dva broja. Ako su oba uneta broja 
+parna, neka ispise njihov proizvod. Ako je prvi
+            // paran a drugi neparan, neka ispise razliku ta dva broja. 
+Ako su oba broja neparna, podeliti jedan 
+            // drugim i ispisati njihov kolicnik.
+
+            public int Sum(int num1, int num2)
+            {
+                int sum;
+                sum = num1 + num2;
+                return sum;
+            }
+            public int Diff1(int num1, int num2)
+            {
+                int diff1;
+                diff1 = num1 - num2;
+                return diff1;
+            }
+            public int Diff2(int num1, int num2)
+            {
+                int diff2;
+                diff2 = num1 - num2;
+                return diff2;
+            }
+            public float Ratio(float num1, float num2)
+            {
+                float ratio;
+                ratio = num1 / num2;
+                return ratio;
+            }
+
+            static void Main(string[] args)
+            {
+                Console.Write("Unesite prvi broj: ");
+                int number1 = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Unesite drugi broj: ");
+                int number2 = Convert.ToInt32(Console.ReadLine());
+
+                int resultSum;
+                int resultDiff1;
+                int resultDiff2;
+                float resultRatio;
+
+                Program s = new Program();
+                resultSum = s.Sum(number1, number2);
+                resultDiff1 = s.Diff1(number1, number2);
+                resultDiff2 = s.Diff2(number1, number2);
+                resultRatio = s.Ratio(number1, number2);
+
+                if (number1 % 2 == 0 && number2 % 2 == 0)
+                {
+                    Console.WriteLine("Brojevi {0} i {1} su parni. 
+Njihov zbir je {2}.", number1, number2, resultSum);
+                }
+                else if (number1 % 2 == 1 && number2 % 2 == 1)
+                {
+                    Console.WriteLine("Brojevi {0} i {1} su neparni. 
+Njihov kolicnik je {2}.", number1, number2, resultRatio);
+                }
+                else if (number1 % 2 == 0 && number2 % 2 == 1)
+                {
+                    Console.WriteLine("Broj {0} je paran, broj {1} je 
+neparan. Njihova razlika je {2}.", number1, number2, resultDiff1);
+                }
+                else if (number1 % 2 == 1 && number2 % 2 == 0)
+                {
+                    Console.WriteLine("Broj {0} je neparan, broj {1} je 
+paran. Njihova razlika je {2}.", number1, number2, resultDiff2);
+                }
+                Console.ReadLine();
+            }
+    }
+}
