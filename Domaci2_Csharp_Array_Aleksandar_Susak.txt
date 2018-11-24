@@ -1,0 +1,55 @@
+namespace ConsoleApp3DomaciNizovi
+{
+    class Program
+    {
+        //    double GetAverage(int[] arr, int size)
+        //{
+        //    double avg;
+        //    int sum = 0;
+        //    for (int i = 0; i < size; i++)
+        //    {
+        //        sum += arr[i];
+        //    }
+        //    avg = (double)sum / size;
+        //    return avg;
+        //}
+
+        double GetAverage(int[] arr)
+        {
+            int size = arr.Length;
+            int sum = 0;
+            double avg = 0;
+            for (int i = 0; i < size; i++)
+            {
+                sum += arr[i];
+            }
+            avg = (double)sum / size;
+            return avg;
+        }
+        public int Addition(params int[] arr)
+        {
+            int sum = 0;
+            foreach(int i in arr)
+            {
+                sum += i;
+            }
+            return sum;
+        }
+        static void Main(string[] args)
+        {
+            int[] someArray = new int[] { 100, 100, 100, 100, 10, 500, 
+45 };
+            double avg;
+            int sum;
+            Program app = new Program();
+
+            //avg = app.GetAverage(someArray, 6);
+            avg = app.GetAverage(someArray);
+            Console.WriteLine("Average value is: {0}", avg);
+            sum = app.Addition(1, 2, 3, 4, 5, 6);
+            Console.WriteLine("Sum is: {0}", sum);
+            Console.ReadLine();
+        }
+    }
+}
+
